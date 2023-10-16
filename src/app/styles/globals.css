@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Light theme colors */
+
+:root {
+  --light-text-color-base: 115, 118, 128;
+  --light-text-color-bright: 69, 71, 71;
+  --light-text-color-brighter: 46, 47, 51;
+  --light-text-color-brighest: 0, 0, 0;
+  --light-background-color: 255, 255, 255;
+  /* Add other light theme color variables here */
+}
+
+/* Dark theme colors */
+:root {
+  --dark-text-color-base: 128, 128, 130;
+  /* Add other dark theme color variables here */
+  --dark-text-color-bright: 171, 176, 183;
+  --dark-text-color-brighter: 209, 216, 225;
+  --dark-text-color-brighest: 255, 255, 255;
+  --dark-background-color: 0, 0, 0;
+}
+
+/* Sepia theme colors */
+:root {
+  --sepia-text-color-base: 122, 96, 57;
+  /* Add other sepia theme color variables here */
+  --sepia-text-color-bright: 92, 65, 25;
+  --sepia-text-color-brighter: 68, 45, 10;
+  --sepia-text-color-brighest: 44, 27, 0;
+  --sepia-background-color: 248, 238, 214;
+}
+
+
+/* Light theme */
+.light {
+  --text-color-base: var(--light-text-color-base);
+  --text-color-bright: var(--light-text-color-bright);
+  --text-color-brighter: var(--light-text-color-brighter);
+  --text-color-brighest: var(--light-text-color-brighest);
+  --background-color: var(--light-background-color);
+
+}
+
+/* Dark theme */
+.dark {
+  --text-color-base: var(--dark-text-color-base);
+  --text-color-bright: var(--dark-text-color-bright);
+  --text-color-brighter: var(--dark-text-color-brighter);
+  --text-color-brighest: var(--dark-text-color-brighest);
+  --background-color: var(--dark-background-color);
+
+}
+
+/* Sepia theme */
+.sepia {
+  --text-color-base: var(--sepia-text-color-base);
+  --text-color-bright: var(--sepia-text-color-bright);
+  --text-color-brighter: var(--sepia-text-color-brighter);
+  --text-color-brighest: var(--sepia-text-color-brighest);
+  --background-color: var(--sepia-background-color);
+}
+
+html,
+body {
+  @apply text-lg tracking-wide p-0 m-0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: rgba(var(--text-color-brighest), 1);
+  background: rgba(var(--background-color), 1);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+h1 {
+  @apply text-6xl font-semibold mb-2 -ml-1;
+  text-shadow: inset 0 0px 8px rgba(var(--text-color-brightest), 1);
+  color: rgba(var(--text-color-base), 1);
+}
+
+h2 {
+  @apply text-5xl my-1 font-semibold mb-2;
+  color: rgba(var(--text-color-bright), 1);
+}
+
+h3 {
+  @apply text-3xl mb-2;
+  color: rgba(var(--text-color-bright), 1);
+}
+
+h4 {
+  @apply text-2xl mb-2;
+  color: rgba(var(--text-color-bright), 1);
+}
+
+h5 {
+  @apply text-xl mb-2;
+  color: rgba(var(--text-color-bright), 1);
+}
+
+h6 {
+  @apply text-lg mb-2;
+  color: rgba(var(--text-color-bright), 1);
+}
+
+p {
+  @apply text-lg leading-loose my-1;
+}
+
